@@ -1,4 +1,8 @@
 Revision history for App-find2perl
 
+1.000     2013-12-04 00:33:56 Europe/Amsterdam
+          Fixup provides field
+          Fixup copyright
+
 0.001     2013-12-03 17:08:43 Europe/Amsterdam
           Released find2perl as in blead circa 5.19.6

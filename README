@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution App-find2perl,
-version 0.001:
+version 1.000:
 
   translate find command lines to Perl code
 
-This software is copyright (c) 2013 by Leon Timmermans.
+This software is copyright (c) 1987 by Perl 5 Porters.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
