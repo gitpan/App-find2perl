@@ -7,4 +7,5 @@ Makefile.PL
 README
 dist.ini
 script/find2perl
+t/00-compile.t
 t/find2perl.t

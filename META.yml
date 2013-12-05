@@ -5,8 +5,12 @@ author:
 build_requires:
   Devel::FindPerl: 0.009
   File::Path: 0
+  File::Spec: 0
   File::Temp: 0
+  IO::Handle: 0
   IPC::Open2: 0
+  IPC::Open3: 0
+  Perl::OSType: 0
   Test::More: 0
   constant: 0
   open: 0
@@ -23,7 +27,7 @@ name: App-find2perl
 provides:
   App::find2perl:
     file: script/find2perl
-    version: 1.000
+    version: 1.001
 requires:
   File::Spec::Functions: 0
   strict: 0
@@ -31,7 +35,7 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=App-find2perl
   repository: git://github.com/Leont/app-find2perl.git
-version: 1.000
+version: 1.001
 x_Dist_Zilla:
   perl:
     version: 5.018001
@@ -152,6 +156,17 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::PkgVersion
       name: PkgVersion
       version: 5.006
+    -
+      class: Dist::Zilla::Plugin::Test::Compile
+      config:
+        Dist::Zilla::Plugin::Test::Compile:
+          filename: t/00-compile.t
+          module_finder:
+            - ':InstallModules'
+          script_finder:
+            - ':ExecFiles'
+      name: Test::Compile
+      version: 2.036
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

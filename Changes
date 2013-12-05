@@ -1,5 +1,10 @@
 Revision history for App-find2perl
 
+1.001     2013-12-05 12:07:17 Europe/Amsterdam
+          Don't try to delete nonexistent files
+          Run on all unixy systems
+          Add compilation tests
+
 1.000     2013-12-04 00:33:56 Europe/Amsterdam
           Fixup provides field
           Fixup copyright

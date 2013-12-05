@@ -14,12 +14,12 @@ use Test::More;
 
 use Devel::FindPerl 0.009 qw/find_perl_interpreter/;
 use IPC::Open2;
+use Perl::OSType 'is_os_type';
 
 # add more platforms if you feel like it, but make sure the
 # tests below are portable to the find(1) for any new platform,
 # or that they skip on that platform
-$^O =~ /^(?:linux|\w+bsd|darwin)$/
-    or plan(skip_all => "Need something vaguely POSIX");
+is_os_type('Unix') or plan(skip_all => "Need something vaguely POSIX");
 
 my $VERBOSE = grep $_ eq '-v', @ARGV;
 
@@ -222,8 +222,8 @@ for my $test (@testcases) {
 }
 
 END {
-    remove_tree($tmpdir);
-    remove_tree($script);
+    remove_tree($tmpdir) if defined $tmpdir;
+    remove_tree($script) if defined $script;
 }
 
 sub runperl {
