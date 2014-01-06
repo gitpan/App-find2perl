@@ -2,7 +2,7 @@
 
 package App::find2perl;
 {
-  $App::find2perl::VERSION = '1.001';
+  $App::find2perl::VERSION = '1.002';
 }
 use strict;
 use vars qw/$statdone/;

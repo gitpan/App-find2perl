@@ -1,5 +1,8 @@
 Revision history for App-find2perl
 
+1.002     2014-01-06 15:47:32 Europe/Amsterdam
+          Match -links checks against find(1) not expect
+
 1.001     2013-12-05 12:07:17 Europe/Amsterdam
           Don't try to delete nonexistent files
           Run on all unixy systems
